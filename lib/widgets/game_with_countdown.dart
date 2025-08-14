@@ -264,7 +264,8 @@ class _GameWithCountdownState extends State<GameWithCountdown>
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 12, 0, 67),
         foregroundColor: Colors.white,
-        title: const Text('Game Screen'),
+        title: const Text('In Game'),
+        centerTitle: true,
       ),
       body: Container(
         color: Colors.pink.withValues(alpha: 0.2),
@@ -272,27 +273,55 @@ class _GameWithCountdownState extends State<GameWithCountdown>
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Column(
                 children: [
                   //********** Win Point ************************** */
-                  Text(
-                    'Win Point  $winPoint |',
-                    style: const TextStyle(
-                      color: Color.fromARGB(255, 151, 113, 0),
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Target ✓',
+                        style: const TextStyle(
+                          color: Color.fromARGB(255, 177, 3, 3),
+                          fontSize: 35,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                      Text(
+                        '$winPoint',
+                        style: const TextStyle(
+                          color: Color.fromARGB(255, 177, 3, 3),
+                          fontSize: 35,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 20,
                   ),
                   //**************** Point ************************ */
-                  Text(
-                    '| Point  $point',
-                    style: const TextStyle(
-                      color: Color.fromARGB(255, 12, 0, 67),
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Current ✓',
+                        style: const TextStyle(
+                          color: Color.fromARGB(255, 12, 0, 67),
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        '$point',
+                        style: const TextStyle(
+                          color: Color.fromARGB(255, 12, 0, 67),
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -303,11 +332,11 @@ class _GameWithCountdownState extends State<GameWithCountdown>
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(
                   color: const Color.fromARGB(255, 20, 1, 105),
-                  width: 5,
+                  width: 2,
                 ),
               ),
               width: width * 0.9,
-              height: high * 0.1,
+              height: high * 0.06,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -320,7 +349,7 @@ class _GameWithCountdownState extends State<GameWithCountdown>
                       'Time Left',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 30,
+                        fontSize: 20,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
@@ -333,14 +362,14 @@ class _GameWithCountdownState extends State<GameWithCountdown>
                       children: [
                         const Icon(
                           color: Color.fromARGB(255, 180, 12, 0),
-                          Icons.timelapse,
-                          size: 50,
+                          Icons.timer_outlined,
+                          size: 35,
                         ),
                         Text(
-                          '00:0$timeCount',
+                          ' 00:0$timeCount',
                           style: const TextStyle(
                             color: Color.fromARGB(255, 180, 12, 0),
-                            fontSize: 40,
+                            fontSize: 30,
                             fontWeight: FontWeight.w300,
                           ),
                         ),
@@ -427,7 +456,6 @@ class _GameWithCountdownState extends State<GameWithCountdown>
               width: width * 0.9,
               height: high * 0.2,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,

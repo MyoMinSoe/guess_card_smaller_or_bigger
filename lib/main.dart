@@ -14,12 +14,12 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: const Color.fromARGB(255, 7, 1, 43),
-          foregroundColor: Colors.white,
+          foregroundColor: const Color.fromARGB(255, 255, 134, 134),
           title: const Text(
-            'Flip Card Game',
+            'Guess Card',
             style: TextStyle(
               fontSize: 30,
-              // fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.bold,
             ),
           ),
           centerTitle: true,

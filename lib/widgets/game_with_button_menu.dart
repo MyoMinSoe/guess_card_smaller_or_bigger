@@ -215,7 +215,7 @@ class _GameWithButtonMenuState extends State<GameWithButtonMenu>
                       fillColor: Colors.white.withValues(alpha: 0.5),
                       enabledBorder: OutlineInputBorder(
                         borderSide: const BorderSide(
-                          color: Color.fromARGB(255, 20, 1, 105),
+                          color: Color.fromARGB(255, 250, 250, 250),
                           width: 2,
                         ),
                         borderRadius: BorderRadius.circular(15),

@@ -75,7 +75,7 @@ class _GameWithCountdownMenuState extends State<GameWithCountdownMenu> {
                       fillColor: Colors.white.withValues(alpha: 0.5),
                       enabledBorder: OutlineInputBorder(
                         borderSide: const BorderSide(
-                          color: Color.fromARGB(255, 253, 140, 235),
+                          color: Color.fromARGB(255, 255, 254, 255),
                           width: 2,
                         ),
                         borderRadius: BorderRadius.circular(15),
